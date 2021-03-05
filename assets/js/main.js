@@ -26,7 +26,13 @@ listaCognomi.sort();
 // stampo e controllo la lista
 console.log(listaCognomi);
 
-// stampo la posizione del cognome appena inserito
+// stampo la posizione di tutti i cognomi della lista
 for (var i = 0; i < listaCognomi.length; i++) {
   console.log(listaCognomi[i] + " = posizione n. " + (i + 1));
+  document.getElementById('cognomi').innerHTML += "<li>" + listaCognomi[i] + "</li>";
 }
+
+// stampo la posizione del cognome inserito
+var indexCognome = listaCognomi.indexOf(cognome) + 1;
+
+document.getElementById('posizione').innerHTML += indexCognome;
